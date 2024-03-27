@@ -19,16 +19,13 @@ cursor = conn.cursor()
 
 #cursor.callproc('sp_createUser',(_name,_email,_hashed_password))
 
-data = cursor.fetchall()
+#data = cursor.fetchall()
 
 #if len(data) is 0:
 #    conn.commit()
 #    return json.dumps({'message':'User created successfully !'})
 #else:
 #    return json.dumps({'error':str(data[0])})
-
-
-cursor.callproc('sp_createUser',(_name,_email,_hashed_password))
 
 @app.route("/")
 def main():
